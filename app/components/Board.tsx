@@ -7,26 +7,21 @@ import Collections from './Collections';
 import kissDog from "../images/kiss-dog.png";
 import hands from "../images/hands.png";
 import Image from "next/image";
-import BoxContent from "./BoxContent";
 import BrandList from "./BrandList";
 import BoxContent2 from "./BoxContent2";
 import KnowledgeList from "./KnowledgeList";
 import { PlayCircleIcon } from "@heroicons/react/24/outline";
 
 function Board() {
-  const [
-    pets,
-    products,
-    brands,
-    knowledges,
-    retrieveData,
-  ] = useMainStore((state) => [
-    state.pets, 
-    state.products,
-    state.brands,
-    state.knowledges,
-    state.retrieveData,
-  ]);
+  const [pets, products, brands, knowledges, retrieveData] = useMainStore(
+    (state) => [
+      state.pets,
+      state.products,
+      state.brands,
+      state.knowledges,
+      state.retrieveData,
+    ]
+  );
 
   useEffect(() => {
     retrieveData();

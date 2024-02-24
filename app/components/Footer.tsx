@@ -22,9 +22,7 @@ function Footer() {
             rounded-t-3xl"
       >
         <div className="w-full flex flex-col md:flex-row gap-4 rounded-2xl p-6 bg-primary">
-          <span className="text-xl font-semibold">
-            Register Now So You Don't Miss Our Programs
-          </span>
+          <span className="text-xl font-semibold">{`Register Now So You Don't Miss Our Programs`}</span>
           <div className="w-full flex flex-col md:flex-row gap-4 rounded-xl p-2 bg-white">
             <input
               type="email"
@@ -86,7 +84,7 @@ function Footer() {
         />
         <div className="w-full flex flex-col-reverse md:flex-row gap-4 items-center justify-between pt-8">
           <span className="text-[13px]  font-[300] text-primary">
-            &copy;{year} Monito. All rights reserved.
+            @{year} Monito. All rights reserved.
           </span>
           <Image
             src={logo}
