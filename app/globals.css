@@ -32,3 +32,150 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.layout {
+@apply flex min-h-screen flex-col w-full overflow-x-hidden bg-slate-50;
+}
+.main-page {
+@apply w-full flex flex-col gap-4 text-slate-600;
+}
+.header-container {
+  @apply flex items-center justify-between gap-2 w-full p-4 md:px-10 lg:px-32 bg-background;
+}
+.header-wrapper {
+@apply text-sm font-light flex items-center gap-3 justify-between relative lg:flex-1;
+}
+.header-top-decoration {
+  @apply w-[300px] h-[200px] bg-secondary absolute rounded-[50px] rotate-25 -top-[160px] -left-[150px];
+}
+.navs-container {
+  @apply text-sm font-light flex items-center lg:gap-8 xl:gap-12 pl-4 md:pl-0 z-20;
+}
+.navs-wrapper {
+  @apply hidden items-center gap-8 lg:flex;
+}
+.nav-item {
+  @apply text-sm font-[500] text-primary whitespace-nowrap cursor-pointer hover:opacity-60;
+}
+.search-bar {
+@apply px-6 py-3 flex items-center gap-2 rounded-3xl bg-white ml-6 relative border;
+}
+.search-input {
+@apply font-light text-sm outline-none border-none min-w-[200px];
+}
+.btn-nowrap {
+@apply bg-primary text-white font-bold text-xs px-6 py-3 rounded-3xl whitespace-nowrap;
+}
+.currency-container {
+@apply flex items-center gap-2 cursor-pointer;
+}
+.currency-icon-wrapper {
+@apply flex items-center justify-center p-[6px] bg-red-600 rounded-full;
+}
+.box-1 {
+@apply flex items-center lg:items-end flex-col-reverse lg:flex-row rounded-3xl min-h-[175px] md:min-h-[250px] lg:min-h-[350px] bg-primary my-10 relative overflow-hidden;
+}
+.box-1-container {
+@apply flex-1 px-8 p-4 md:p-6 lg:p-8;
+}
+.box-1-content {
+@apply flex flex-col relative w-full text-primary lg:flex-shrink;
+}
+.box-title {
+@apply text-[2em] text-center md:text-[3.5em] md:text-right font-extrabold leading-tight;
+}
+.box-subtitle {
+@apply text-[1.3em] text-center md:text-[2.5em] md:text-right font-[600] pb-6;
+}
+.box-desc {
+@apply text-sm lg:text-lg text-center md:text-right;
+}
+.btn-group {
+@apply flex items-center md:justify-end gap-3 py-4 mt-4;
+}
+
+.btn-light {
+@apply flex items-center border gap-2 border-primary px-8 py-2 w-fit rounded-3xl cursor-pointer whitespace-nowrap hover:opacity-60;
+}
+.btn-primary {
+@apply flex items-center bg-primary text-white px-8 py-2 w-fit rounded-3xl cursor-pointer whitespace-nowrap hover:opacity-60;
+}
+
+.box-2 {
+@apply hidden md:flex items-end rounded-3xl min-h-[175px] md:min-h-[250px] lg:min-h-[350px] max-h-[350px] bg-badge my-10 relative overflow-hidden;
+}
+
+.banner {
+@apply flex w-full bg-background  px-4 md:px-10 lg:px-32 lg:flex-row rounded-b-3xl overflow-hidden;
+}
+.banner-wrapper {
+@apply flex w-full gap-6 flex-col lg:flex-row lg:items-end;
+}
+.banner-image-container {
+@apply flex w-full justify-between items-end lg:flex-grow;
+}
+
+.plate {
+@apply flex flex-col relative md:w-full text-primary lg:flex-shrink;
+}
+.plate-title {
+@apply flex items-end md:items-center justify-start text-[2.2em] md:text-[4em] font-extrabold leading-tight relative;
+}
+.plate-subtitle {
+@apply text-[1.3em] md:text-[2.5em] font-[600] pb-6;
+}
+.plate-btn-group {
+@apply flex items-center gap-3 py-4 mt-4;
+}
+
+.plate-2 {
+@apply flex flex-col relative w-full text-primary lg:flex-shrink;
+}
+.plate-2-title-wrapper {
+@apply flex items-center gap-4;
+}
+.plate-2-title {
+@apply text-[2.5em] md:text-[3.5em] font-extrabold leading-tight;
+}
+.plate-2-subtitle {
+@apply text-[1.3em] md:text-[2em] font-[600] pb-6;
+}
+.plate-2-btn-group {
+@apply flex items-center gap-3 py-4 mt-4;
+}
+
+.footer {
+@apply flex flex-col bg-background w-full items-center justify-between py-12 px-4 md:px-10 lg:px-32 rounded-t-3xl;
+}
+.subscribe-container {
+@apply w-full flex flex-col md:flex-row gap-4 rounded-2xl p-6 bg-primary;
+}
+.subscribe-form {
+@apply w-full flex flex-col md:flex-row gap-4 rounded-xl p-2 bg-white;
+}
+.subscribe-email {
+@apply flex-1  rounded-xl px-6 py-4 font-light text-sm outline-none border border-slate-300 text-primary;
+}
+.subscribe-btn {
+@apply flex items-center justify-center border gap-2 bg-primary px-8 py-3 w-full md:w-fit rounded-xl font-light cursor-pointer hover:opacity-60;
+}
+.footer-navs {
+@apply w-full flex flex-col md:flex-row gap-4 items-center justify-between py-8 border-b border-slate-300;
+}
+.footer-nav-wrapper {
+@apply flex items-center justify-between w-full md:w-fit gap-8;
+}
+.footer-nav-item {
+@apply text-sm font-[500] text-primary whitespace-nowrap cursor-pointer hover:opacity-60;
+}
+.soc-med {
+@apply flex items-center gap-6;
+}
+.socmed-item {
+@apply cursor-pointer hover:opacity-60;
+}
+.footer-copyrights {
+@apply w-full flex flex-col-reverse md:flex-row gap-4 items-center justify-between pt-8;
+}
+.footer-nav2 {
+@apply text-[13px] font-[300] text-primary whitespace-nowrap cursor-pointer hover:opacity-60;
+}

@@ -10,7 +10,7 @@ import Image from "next/image";
 import BrandList from "./BrandList";
 import BoxContent2 from "./BoxContent2";
 import KnowledgeList from "./KnowledgeList";
-import { PlayCircleIcon } from "@heroicons/react/24/outline";
+import { PlayCircleIcon } from "@heroicons/react/24/solid";
 
 function Board() {
   const [pets, products, brands, knowledges, retrieveData] = useMainStore(
@@ -36,7 +36,7 @@ function Board() {
           subtitle={"What's new?"}
           title={"Take A Look At Some Of Our Pets"}
         />
-        <div className="flex items-center lg:items-end flex-col-reverse lg:flex-row rounded-3xl min-h-[175px] md:min-h-[250px] lg:min-h-[350px] bg-primary my-10 relative overflow-hidden">
+        <div className="box-1">
           <div
             className="flex-1 relative
             before:z-1
@@ -66,7 +66,7 @@ function Board() {
             </div>
           </div>
           <div
-            className="flex-1 px-8 p-4 md:p-6 lg:p-8
+            className="box-1-container
           before:bg-background
             before:-z-2
             before:w-[500px]
@@ -87,30 +87,20 @@ function Board() {
             lg:before:left-[60%]
           "
           >
-            <div className="flex flex-col relative w-full text-primary lg:flex-shrink">
-              <h1
-                className={`text-[2em] text-center md:text-[3.5em] md:text-right font-extrabold leading-tight`}
-              >
-                One More Friend
-              </h1>
-              <h3
-                className={`text-[1.3em] text-center md:text-[2.5em] md:text-right font-[600] pb-6`}
-              >
-                Thousands More Fun!
-              </h3>
-              <span className={`text-sm lg:text-lg text-center md:text-right`}>
+            <div className="box-1-content">
+              <h1 className={`box-title`}>One More Friend</h1>
+              <h3 className={`box-subtitle`}>Thousands More Fun!</h3>
+              <span className={`box-desc`}>
                 Having a pet means you have more joy, a new friend, a happy
                 person who will always be with you to have fun. We have 200+
                 different pets that can meet your needs!
               </span>
-              <div
-                className={`flex items-center md:justify-end gap-3 py-4 mt-4`}
-              >
-                <button className="flex items-center border gap-2 border-primary px-8 py-2 w-fit rounded-3xl cursor-pointer whitespace-nowrap hover:opacity-60">
+              <div className={`btn-group`}>
+                <button className="btn-light">
                   <span>View Intro</span>
                   <PlayCircleIcon width={18} />
                 </button>
-                <button className="flex items-center bg-primary text-white px-8 py-2 w-fit rounded-3xl cursor-pointer whitespace-nowrap hover:opacity-60">
+                <button className="btn-primary">
                   <span>Explore Now</span>
                 </button>
               </div>
@@ -125,7 +115,7 @@ function Board() {
           />
         </div>
         <BrandList items={brands} />
-        <div className="hidden md:flex items-end rounded-3xl min-h-[175px] md:min-h-[250px] lg:min-h-[350px] max-h-[350px] bg-badge my-10 relative overflow-hidden">
+        <div className="box-2">
           <div
             className="flex-1 px-8 items-center relative
           before:bg-background

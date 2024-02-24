@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-slate-50 dark:bg-slate-50 h-full w-full`}
       >
-        <main className="flex min-h-screen flex-col w-full overflow-x-hidden bg-slate-50">
+        <main className="layout">
           <Header />
           <div className="w-full pb-6">{children}</div>
           <Footer />

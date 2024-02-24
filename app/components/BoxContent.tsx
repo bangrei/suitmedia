@@ -8,10 +8,9 @@ interface Props {
 }
 function BoxContent(props: Props) {
     return (
-      <div className="flex flex-col relative md:w-full text-primary lg:flex-shrink">
+      <div className="plate">
         <h1
-          className={`flex items-end md:items-center justify-start
-          text-[2.2em] md:text-[4em] font-extrabold leading-tight relative
+          className={`plate-title
           before:w-[20px]
           before:h-[20px]
           md:before:w-[65px]
@@ -28,24 +27,22 @@ function BoxContent(props: Props) {
         >
           <span className="relative z-10">One More Friend</span>
         </h1>
-        <h3 className={`text-[1.3em] md:text-[2.5em] font-[600] pb-6`}>
-          Thousands More Fun!
-        </h3>
+        <h3 className={`plate-subtitle`}>Thousands More Fun!</h3>
         <span className={`text-sm lg:text-lg`}>
           Having a pet means you have more joy, a new friend, a happy person who
           will always be with you to have fun. We have 200+ different pets that
           can meet your needs!
         </span>
         <div
-          className={`flex items-center gap-3 py-4 mt-4 ${
+          className={`plate-btn-group ${
             props.alignTo == "md:right" ? "md:justify-end" : ""
           }`}
         >
-          <button className="flex items-center border gap-2 border-primary px-8 py-2 w-fit rounded-3xl cursor-pointer whitespace-nowrap hover:opacity-60">
+          <button className="btn-light">
             <span>View Intro</span>
             <PlayCircleIcon width={18} />
           </button>
-          <button className="flex items-center bg-primary text-white px-8 py-2 w-fit rounded-3xl cursor-pointer whitespace-nowrap hover:opacity-60">
+          <button className="btn-primary">
             <span>Explore Now</span>
           </button>
         </div>
