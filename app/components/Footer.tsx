@@ -15,7 +15,7 @@ function Footer() {
     return (
       <div className="footer">
         <div className="subscribe-container">
-          <span className="text-xl font-semibold">{`Register Now So You Don't Miss Our Programs`}</span>
+          <span className="subscribe-label">{`Register Now So You Don't Miss Our Programs`}</span>
           <div className="subscribe-form">
             <input
               type="email"

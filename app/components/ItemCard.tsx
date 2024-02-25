@@ -20,7 +20,7 @@ function ItemCard(props: Props) {
       let currRev = positiveValue.toString().split("").reverse().join("");
       for (let i = 0; i < currRev.length; i++) {
         if (i % 3 == 0) {
-          curr += currRev.substr(i, 3) + ",";
+          curr += currRev.substr(i, 3) + ".";
         }
       }
 
@@ -28,7 +28,7 @@ function ItemCard(props: Props) {
         .split("", curr.length - 1)
         .reverse()
         .join("");
-      return `${totalString} ${decimalValue > 0 ? "." + decimalValue : ""}`;
+      return `${totalString} ${decimalValue > 0 ? "," + decimalValue : ""}`;
     }
   };
   return (
@@ -43,14 +43,16 @@ function ItemCard(props: Props) {
         />
       </div>
       <div className="text-title font-semibold">{props.item.type}</div>
-      {props.item.tags.map((tag: any, i:any) => {
-        return (
-          <div className="flex gap-2 text-sm text-slate-600" key={i}>
-            <span className="font-light">{tag.title}</span>
-            <span className="font-medium">{tag.value}</span>
-          </div>
-        );
-      })}
+      <div className="tags">
+        {props.item.tags.map((tag: any, i: any) => {
+          return (
+            <div className="tag-item" key={i}>
+              <span className="font-light">{tag.title}:</span>
+              <span className="font-medium">{tag.value}</span>
+            </div>
+          );
+        })}
+      </div>
       <div className="font-semibold text-title">
         {currency(props.item.price)} VND
       </div>

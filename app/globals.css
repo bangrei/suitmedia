@@ -75,19 +75,19 @@ body {
 @apply flex items-center lg:items-end flex-col-reverse lg:flex-row rounded-3xl min-h-[175px] md:min-h-[250px] lg:min-h-[350px] bg-primary my-10 relative overflow-hidden;
 }
 .box-1-container {
-@apply flex-1 px-8 p-4 md:p-6 lg:p-8;
+@apply flex-1 py-8 px-16 md:py-6 lg:py-8;
 }
 .box-1-content {
-@apply flex flex-col relative w-full text-primary lg:flex-shrink;
+@apply flex flex-1 flex-col relative z-20 w-full text-primary md:pl-16 lg:flex-shrink;
 }
 .box-title {
-@apply text-[2em] text-center md:text-[3.5em] md:text-right font-extrabold leading-tight;
+@apply text-[2em] text-center md:text-[2.5em] md:text-right font-extrabold leading-tight;
 }
 .box-subtitle {
-@apply text-[1.3em] text-center md:text-[2.5em] md:text-right font-[600] pb-6;
+@apply text-[1.3em] text-center md:text-[1.7em] md:text-right font-[600] pb-6;
 }
 .box-desc {
-@apply text-sm lg:text-lg text-center md:text-right;
+@apply flex justify-end text-sm text-center md:text-right;
 }
 .btn-group {
 @apply flex items-center md:justify-end gap-3 py-4 mt-4;
@@ -101,7 +101,23 @@ body {
 }
 
 .box-2 {
-@apply hidden md:flex items-end rounded-3xl min-h-[175px] md:min-h-[250px] lg:min-h-[350px] max-h-[350px] bg-badge my-10 relative overflow-hidden;
+@apply hidden md:flex items-start rounded-3xl min-h-[175px] md:min-h-[250px] lg:min-h-[350px] max-h-[350px] overflow-hidden bg-badge my-10 relative overflow-hidden;
+}
+
+.box-2-container {
+@apply flex-1 px-8 items-center relative;
+}
+.box-2-container::before {
+  content: "";
+  @apply absolute bg-background w-[800px] h-[800px] rounded-[50px] -rotate-28 -bottom-[60px] -left-[250px];
+}
+
+.box-2-content {
+  @apply flex-1 relative md:h-[350px];
+}
+.box-2-content::before {
+  content: "";
+  @apply absolute bg-secondary/30 w-[800px] h-[800px] rounded-[70px] -rotate-28 top-[150px] -right-48;
 }
 
 .banner {
@@ -149,14 +165,17 @@ body {
 .subscribe-container {
 @apply w-full flex flex-col md:flex-row gap-4 rounded-2xl p-6 bg-primary;
 }
+.subscribe-label {
+@apply text-xl font-semibold text-white;
+}
 .subscribe-form {
 @apply w-full flex flex-col md:flex-row gap-4 rounded-xl p-2 bg-white;
 }
 .subscribe-email {
-@apply flex-1  rounded-xl px-6 py-4 font-light text-sm outline-none border border-slate-300 text-primary;
+@apply flex-1 rounded-xl px-6 py-4 font-light text-sm outline-none border border-slate-300 text-primary focus:border-primary;
 }
 .subscribe-btn {
-@apply flex items-center justify-center border gap-2 bg-primary px-8 py-3 w-full md:w-fit rounded-xl font-light cursor-pointer hover:opacity-60;
+@apply flex items-center justify-center border gap-2 bg-primary text-white px-8 py-3 w-full md:w-fit rounded-xl font-light cursor-pointer hover:opacity-60;
 }
 .footer-navs {
 @apply w-full flex flex-col md:flex-row gap-4 items-center justify-between py-8 border-b border-slate-300;
@@ -178,4 +197,14 @@ body {
 }
 .footer-nav2 {
 @apply text-[13px] font-[300] text-primary whitespace-nowrap cursor-pointer hover:opacity-60;
+}
+.tags {
+@apply flex flex-col md:flex-row md:items-center gap-3 relative;
+}
+.tag-item {
+@apply flex gap-2 text-xs text-slate-600;
+}
+.tag-item + .tag-item::before {
+  content: "";
+  @apply w-[4px] h-[4px] rounded-full bg-primary my-auto hidden md:flex;
 }

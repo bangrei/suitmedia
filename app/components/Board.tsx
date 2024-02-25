@@ -45,14 +45,16 @@ function Board() {
             before:h-[500px]
             md:before:w-[800px]
             md:before:h-[800px]
-            before:rounded-[50px]
+            before:rounded-[80px]
             before:rotate-28
+            md:before:rotate-12
+            lg:before:rotate-28
             before:absolute
             before:-bottom-[400px]
             before:-left-[120px]
             md:before:-bottom-[600px]
-            md:before:-left-[300px]
-            lg:before:top-[120px]
+            md:before:-left-[150px]
+            lg:before:top-[50%]
             lg:before:-left-52"
           >
             <div className="relative z-10">
@@ -73,18 +75,16 @@ function Board() {
             before:h-[500px]
             md:before:w-[800px]
             md:before:h-[800px]
-            before:rounded-[50px]
+            before:rounded-[100px]
             before:rotate-12
             md:before:rotate-12
             lg:before:rotate-28
             before:absolute
-            before:-top-[170px]
-            before:-left-[50px]
-            md:before:-top-[460px]
-            md:before:-left-[20px]
-            lg:before:-top-[320px]
-            lg:before:-left-[unset]
-            lg:before:left-[60%]
+            before:-top-[140px]
+            before:right-[-50px]
+            md:before:-top-[65%]
+            lg:before:-top-[380px]
+            lg:before:right-[-20%]
           "
           >
             <div className="box-1-content">
@@ -116,42 +116,19 @@ function Board() {
         </div>
         <BrandList items={brands} />
         <div className="box-2">
-          <div
-            className="flex-1 px-8 items-center relative
-          before:bg-background
-            before:z-2
-            before:w-[800px]
-            before:h-[800px]
-            before:rounded-[50px]
-            before:-rotate-28
-            before:absolute
-            before:-bottom-[60px]
-            before:-left-[250px]
-          "
-          >
+          <div className="box-2-container before:z-2">
             <div className="p-4 md:p-6 lg:p-8">
               <BoxContent2 />
             </div>
           </div>
-          <div
-            className="flex-1 relative
-            before:-z-3
-            before:bg-secondary/30
-            before:w-[800px]
-            before:h-[800px]
-            before:rounded-[50px]
-            before:-rotate-28
-            before:absolute
-            before:top-[160px]
-            before:-right-48"
-          >
-            <div className="relative">
+          <div className="box-2-content before:-z-3">
+            <div className="relative h-full">
               <Image
                 src={hands}
                 alt={""}
                 width={0}
                 height={0}
-                style={{ zIndex: "20", height: "80vh", maxHeight: "45vh" }}
+                style={{ zIndex: "20", height: "100%", objectFit: "cover" }}
               />
             </div>
           </div>
