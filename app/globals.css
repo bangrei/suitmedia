@@ -105,11 +105,12 @@ body {
 }
 
 .box-2-container {
-@apply flex-1 px-8 items-center relative;
+  z-index: 1;
+  @apply flex-1 px-8 items-center relative;
 }
 .box-2-container::before {
   content: "";
-  @apply absolute bg-background w-[800px] h-[800px] rounded-[50px] -rotate-28 -bottom-[60px] -left-[250px];
+  @apply absolute bg-background w-[800px] h-[800px] rounded-[70px] -rotate-28 -bottom-[60px] -left-[250px];
 }
 
 .box-2-content {
@@ -118,6 +119,10 @@ body {
 .box-2-content::before {
   content: "";
   @apply absolute bg-secondary/30 w-[800px] h-[800px] rounded-[70px] -rotate-28 top-[150px] -right-48;
+}
+.box-2-image {
+  z-index: 2;
+  @apply relative h-full;
 }
 
 .banner {

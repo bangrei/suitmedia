@@ -116,13 +116,13 @@ function Board() {
         </div>
         <BrandList items={brands} />
         <div className="box-2">
-          <div className="box-2-container before:z-2">
+          <div className="box-2-container">
             <div className="p-4 md:p-6 lg:p-8">
               <BoxContent2 />
             </div>
           </div>
-          <div className="box-2-content before:-z-3">
-            <div className="relative h-full">
+          <div className="box-2-content">
+            <div className="box-2-image">
               <Image
                 src={hands}
                 alt={""}
